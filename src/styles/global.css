@@ -1,57 +1,154 @@
-.layout{
-    padding-top: 5px;
-    height: 100vh;
-    background-color: lightgray;
+.layout {
+  padding-top: 5px;
+  height: 100vh;
+  background-color: lightgray;
+  position: sticky;
+  top: 0px;
 }
 
-.info-container{
-    margin-left: 32px !important;
+.info-container {
+  margin-left: 39px !important;
 }
-.cursor-pointer{
-    cursor: pointer;
+.cursor-pointer {
+  cursor: pointer;
 }
-.text-lg{
-    font-size: 20px;
+.text-lg {
+  font-size: 20px;
 }
-.text-md{
-    font-size: 18px;
+.text-md {
+  font-size: 18px;
 }
-.text-sm{
-    font-size: 16px;
+.text-sm {
+  font-size: 16px;
 }
-.logo{
-    color: #075E54;
+.logo {
+  color: #075e54;
 }
-.input-grey-rounded{
-    font-size: 16px;
-    line-height: 1.5;
-    background: #E9EEF0;
-    border: 1px solid #D5D9DB;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><path fill='%238C92A0' d='M11.44 10.73l4.41 4.42a.5.5 0 1 1-.7.7l-4.42-4.41a6.5 6.5 0 1 1 .7-.7v-.01zM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11z'></path></svg>");
-    background-repeat: no-repeat;
-    background-position: 15px 10px;
-    background-size: 20px 20px;
-    border-radius: 100px;
-    /* width: 300px; */
-    width: 100%;
-    padding: .5em 1em .5em 2.5em;
-    } 
+.input-grey-rounded {
+  font-size: 16px;
+  line-height: 1.5;
+  background: #e9eef0;
+  border: 1px solid #d5d9db;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><path fill='%238C92A0' d='M11.44 10.73l4.41 4.42a.5.5 0 1 1-.7.7l-4.42-4.41a6.5 6.5 0 1 1 .7-.7v-.01zM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11z'></path></svg>");
+  background-repeat: no-repeat;
+  background-position: 15px 10px;
+  background-size: 20px 20px;
+  border-radius: 100px;
+  /* width: 300px; */
+  width: 100%;
+  padding: 0.5em 1em 0.5em 2.5em;
+}
+
+.input-grey-rounded::placeholder {
+  color: #838d99;
+}
+
+.input-grey-rounded:focus {
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #84a2fa;
+}
+.sidebar {
+  width: 50px;
+  position: absolute;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.chat-container {
+  /* flex: 1; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chat-image {
+  height: 16rem;
+}
+.btn-chat {
+  background-color: #075e54;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 26px;
+  color: white;
+}
+.user-info:hover {
+  background-color: #ccced1;
+}
+.chat-content,
+.contact-list,
+.chat-window {
+  height: 100vh;
+}
+
+.chat-window-header {
+  position: sticky;
+  top: 0px;
+}
+.input-container {
+  position: absolute;
+  bottom: 0px;
+  width: 79%;
+}
+.chat-window-body {
     
-    .input-grey-rounded::placeholder{
-      color: #838D99;
-    }
-    
-    .input-grey-rounded:focus {
-      outline: none;
-      background-color: #FFF;
-      border: 1px solid #84A2FA;
-    }
-    .sidebar{
-        width: 50px;
-        position: absolute;
-        left: 0px;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        
-    }
+    background-color: rgba(7, 94, 84, 0.1);
+    width: 40%;
+    margin: 15px 5px ;
+    height: max-content;
+  
+   right: 8px;
+   padding: 5px 24px;
+   border-radius: 15px 0px 15px 0px;
+}
+
+
+.chat-body{
+    flex: 1;
+    overflow-y: scroll;
+
+}
+.chat-body::-webkit-scrollbar{
+    display: none;
+}
+.chatContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.add-btn {
+    background-color: #075e54;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 26px;
+    color: white;
+    width: 130px;
+
+  /* position: absolute;
+        bottom: 2px; */
+}
+.add-user {
+  position: absolute;
+  bottom: 2px;
+  max-width: 249px;
+}
+.user-input {
+  margin-bottom: 30px;
+  width: 95%;
+  border-radius: 26px;
+  padding: 5px 12px;
+
+}
+
+.save-btn {
+    background-color: #075e54;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 26px;
+    color: white;
+    /* width: 130px; */
+    margin-top: 5px;
+}

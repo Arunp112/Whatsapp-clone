@@ -6,7 +6,7 @@ import { FaBoxArchive } from "react-icons/fa6";
 import { id } from "@instantdb/react";
 import { MdDonutLarge } from "react-icons/md";
 
-export const sidebarIcon = [
+export const sidebarIconPrimary = [
   {
     id: 1,
     icon: LuMessageSquareMore,
@@ -19,4 +19,19 @@ export const sidebarIcon = [
     id: 3,
     icon: MdDonutLarge,
   },
-];
+] || [];
+
+export const sidebarIconSecondary = [
+  {
+    id: 1,
+    icon: FaRegStar,
+  },
+  {
+    id: 2,
+    icon: FaBoxArchive,
+  },
+  {
+    id: 3,
+    icon: IoSettingsOutline,
+  },
+] || [];

@@ -141,7 +141,6 @@ export const InputContainer = styled.form`
   background: #f0f2f5;
   display: flex;
   gap: 0.5rem;
-  width: 95%;
 
   @media (max-width: 768px) {
     width: 100%;

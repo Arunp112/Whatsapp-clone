@@ -12,7 +12,6 @@ function MessageInput() {
   const [message, setMessage] = useState("");
   const { state } = useContext(ContactsContext);
   const { sendMessage } = useInstantDB();
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,18 +23,21 @@ function MessageInput() {
 
   return (
     // <div onSubmit={handleSubmit}>
-     <InputContainer onSubmit={handleSubmit}>
-      <Input
-        type="text"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        placeholder="Type a message"
-      />
-     
-      <SendButton type="submit">Send</SendButton>
-      {/* <button type="submit">Send</button> */}
-    </InputContainer>
-  //  </div>
+    <div className="">
+      <InputContainer onSubmit={handleSubmit} className="input-container">
+        <Input
+          type="text"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Type a message"
+        />
+
+        <SendButton type="submit">Send</SendButton>
+        {/* <button type="submit">Send</button> */}
+      </InputContainer>
+      <div />
+  
+    </div>
   );
 }
-export default MessageInput
+export default MessageInput;
