@@ -22,7 +22,6 @@ function MessageInput() {
   };
 
   return (
-    // <div onSubmit={handleSubmit}>
     <div className="">
       <InputContainer onSubmit={handleSubmit} className="input-container">
         <Input
@@ -33,10 +32,8 @@ function MessageInput() {
         />
 
         <SendButton type="submit">Send</SendButton>
-        {/* <button type="submit">Send</button> */}
       </InputContainer>
       <div />
-  
     </div>
   );
 }

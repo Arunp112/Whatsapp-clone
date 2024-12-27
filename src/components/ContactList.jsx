@@ -1,11 +1,5 @@
-import React, { useMemo, useState, useContext, useEffect } from "react";
-import {
-  Sidebar,
-  ContactItem,
-  ContactName,
-  LastMessage,
-} from "../styles/StyledComponents";
-import styled from "styled-components";
+import React, { useState, useContext, useEffect } from "react";
+
 import useInstantDB from "../customHooks/useInstantDB";
 import { ContactsContext } from "../context/ContactsContext";
 import { IconButton } from "@mui/material";
@@ -14,10 +8,10 @@ import { MdChat } from "react-icons/md";
 import { FaEllipsisVertical } from "react-icons/fa6";
 import { Avatar } from "@mui/material";
 
-export default function ContactList({ message }) {
+export default function ContactList() {
   const { state, setContacts, selectContact } = useContext(ContactsContext);
   const { fetchUsers } = useInstantDB();
-  const { isLoading, error, data } = fetchUsers();
+  const { isLoading, data } = fetchUsers();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -60,38 +54,27 @@ export default function ContactList({ message }) {
           <input class="input-grey-rounded" type="text" placeholder="Search" />
         </span>
       </div>
-      {/* <Sidebar> */}
+
       {state.contacts &&
         state.contacts.map((contact) => (
-          // <ContactItem
-          //   key={contact.id}
-          //   isSelected={state.selectedContact?.id === contact.id}
-          //   onClick={() => selectContact(contact.id, contact.name)}
-          // >
           <div
             key={contact.id}
             isSelected={state.selectedContact?.id === contact.id}
             onClick={() => selectContact(contact.id, contact.name)}
           >
-            {/* <ContactName> */}
             <div className="mt-2">
-            <div className="d-flex justify-content-start align-items-center gap-2 p-2 cursor-pointer user-info">
-              <span>
-                <Avatar src="https://api.dicebear.com/9.x/fun-emoji/svg" />
-              </span>
-              <span>{contact.name}</span>
-              {/* <span>{message.text}</span> */}
+              <div className="d-flex justify-content-start align-items-center gap-2 p-2 cursor-pointer user-info">
+                <span>
+                  <Avatar src="https://api.dicebear.com/9.x/fun-emoji/svg" />
+                </span>
+                <span>{contact.name}</span>
+              </div>
+
+              <div>{contact.lastMessage}</div>
             </div>
-            {/* </ContactName> */}
-            {/* <LastMessage> */}
-            <div>{contact.lastMessage}</div>
-            {/* </LastMessage> */}
           </div>
-          </div>
-          // </ContactItem>
         ))}
       <div className="add-user">
-        {/* <ADD_CONTACT> */}
         {addNewContact && (
           <div className="">
             <input
@@ -114,46 +97,7 @@ export default function ContactList({ message }) {
         >
           {addNewContact ? "Cancel" : "Add +"}
         </button>
-        {/* </ADD_CONTACT> */}
       </div>
-
-      {/* </Sidebar> */}
     </div>
   );
 }
-
-// const ADD_CONTACT = styled.div`
-//   width: 70%;
-//   margin: auto;
-//   padding: 20px 0;
-
-//   button {
-//     width: 100%;
-//     height: 40px;
-//     border-radius: 20px;
-//     background-color: var(--color, #128c7e);
-//     border: none;
-//     color: white;
-//     font-weight: 500;
-//     cursor: pointer;
-//     margin-top: 20px;
-//   }
-
-//   input {
-//     width: 90%;
-//     height: 40px;
-//     border-radius: 10px;
-//     margin-bottom: 20px;
-//     border: 0.5px solid lightgray;
-//     /* padding: 0 10px; */
-//     margin: auto;
-//   }
-//   input:focus {
-//     outline: none;
-//     border: 2px solid lightblue;
-//   }
-
-//   @media (max-width: 768px) {
-//     width: 95%;
-//   }
-// `;

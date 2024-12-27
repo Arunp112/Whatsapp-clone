@@ -3,7 +3,6 @@ import { LuMessageSquareMore } from "react-icons/lu";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaRegStar } from "react-icons/fa";
 import { FaBoxArchive } from "react-icons/fa6";
-import { id } from "@instantdb/react";
 import { MdDonutLarge } from "react-icons/md";
 
 export const sidebarIconPrimary = [

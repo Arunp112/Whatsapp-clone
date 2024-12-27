@@ -4,7 +4,7 @@ import MessageInput from "./MessageInput";
 import Message from "./Message";
 import { ContactsContext } from "../context/ContactsContext";
 import useInstantDB from "../customHooks/useInstantDB";
-import { ChatContainer, MessagesContainer } from "../styles/StyledComponents";
+
 import { Avatar } from "@mui/material";
 import { IconButton } from "@mui/material";
 import { IoMdCall } from "react-icons/io";
@@ -13,7 +13,7 @@ import { IoVideocamOutline } from "react-icons/io5";
 function ChatWindow() {
   const { state } = useContext(ContactsContext);
   const { fetchMessages } = useInstantDB();
-  const { isLoading, error, data } = fetchMessages();
+  const { isLoading, data } = fetchMessages();
   const [messages, setMessages] = useState(null);
 
   useEffect(() => {
@@ -27,10 +27,8 @@ function ChatWindow() {
 
   return (
     <div className="chatcontainer">
-      {/* <ChatContainer> */}
       {state && state.selectedContact ? (
         <div>
-          {/* <MessagesContainer> */}
           <div className="chat-window-header pt-2 border-bottom">
             <div className="d-flex justify-content-between align-items-center bg-white">
               <span className="d-flex gap-2">
@@ -60,7 +58,6 @@ function ChatWindow() {
                 ))}
             <MessageInput />
           </div>
-          {/* </MessagesContainer> */}
         </div>
       ) : (
         <div className="chat-container">
@@ -77,7 +74,6 @@ function ChatWindow() {
           </div>
         </div>
       )}
-      {/* </ChatContainer> */}
     </div>
   );
 }

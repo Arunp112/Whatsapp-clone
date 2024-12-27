@@ -34,7 +34,6 @@
   background-position: 15px 10px;
   background-size: 20px 20px;
   border-radius: 100px;
-  /* width: 300px; */
   width: 100%;
   padding: 0.5em 1em 0.5em 2.5em;
 }
@@ -59,7 +58,6 @@
 }
 
 .chat-container {
-  /* flex: 1; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,25 +91,22 @@
   width: 79%;
 }
 .chat-window-body {
-    
-    background-color: rgba(7, 94, 84, 0.1);
-    width: 40%;
-    margin: 15px 5px ;
-    height: max-content;
-  
-   right: 8px;
-   padding: 5px 24px;
-   border-radius: 15px 0px 15px 0px;
+  background-color: rgba(7, 94, 84, 0.1);
+  width: 40%;
+  margin: 15px 5px;
+  height: max-content;
+
+  right: 8px;
+  padding: 5px 24px;
+  border-radius: 15px 0px 15px 0px;
 }
 
-
-.chat-body{
-    flex: 1;
-    overflow-y: scroll;
-
+.chat-body {
+  flex: 1;
+  overflow-y: scroll;
 }
-.chat-body::-webkit-scrollbar{
-    display: none;
+.chat-body::-webkit-scrollbar {
+  display: none;
 }
 .chatContainer {
   flex: 1;
@@ -120,15 +115,12 @@
   justify-content: end;
 }
 .add-btn {
-    background-color: #075e54;
-    padding: 9px 18px;
-    border: none;
-    border-radius: 26px;
-    color: white;
-    width: 130px;
-
-  /* position: absolute;
-        bottom: 2px; */
+  background-color: #075e54;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 26px;
+  color: white;
+  width: 130px;
 }
 .add-user {
   position: absolute;
@@ -140,15 +132,13 @@
   width: 95%;
   border-radius: 26px;
   padding: 5px 12px;
-
 }
 
 .save-btn {
-    background-color: #075e54;
-    padding: 9px 18px;
-    border: none;
-    border-radius: 26px;
-    color: white;
-    /* width: 130px; */
-    margin-top: 5px;
+  background-color: #075e54;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 26px;
+  color: white;
+  margin-top: 5px;
 }
