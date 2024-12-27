@@ -1,0 +1,22 @@
+import { MdCall } from "react-icons/md";
+import { LuMessageSquareMore } from "react-icons/lu";
+import { IoSettingsOutline } from "react-icons/io5";
+import { FaRegStar } from "react-icons/fa";
+import { FaBoxArchive } from "react-icons/fa6";
+import { id } from "@instantdb/react";
+import { MdDonutLarge } from "react-icons/md";
+
+export const sidebarIcon = [
+  {
+    id: 1,
+    icon: LuMessageSquareMore,
+  },
+  {
+    id: 2,
+    icon: MdCall,
+  },
+  {
+    id: 3,
+    icon: MdDonutLarge,
+  },
+];
